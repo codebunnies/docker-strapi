@@ -9,9 +9,9 @@ API with no effort.
 
 [GitHub repository](https://github.com/naskio/docker-strapi)
 
-[Docker Hub](https://hub.docker.com/r/naskio/strapi)
+[Docker Hub](https://hub.docker.com/r/codebunny/strapi)
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/naskio/strapi.svg?style=for-the-badge)](https://hub.docker.com/r/naskio/strapi)
+[![Docker Pulls](https://img.shields.io/docker/pulls/codebunny/strapi.svg?style=for-the-badge)](https://hub.docker.com/r/codebunny/strapi)
 
 ---
 
@@ -23,7 +23,7 @@ Using Docker Compose, create `docker-compose.yml` file with the following conten
 version: "3"
 services:
   strapi:
-    image: naskio/strapi
+    image: codebunny/strapi
     environment:
       NODE_ENV: development # or production
     ports:
@@ -35,7 +35,7 @@ services:
 or using Docker:
 
 ```shell
-docker run -d -p 1337:1337 naskio/strapi --env NODE_ENV=development
+docker run -d -p 1337:1337 codebunny/strapi --env NODE_ENV=development
 ```
 
 You can find more example on [GitHub](https://github.com/naskio/docker-strapi/tree/main/examples).
