@@ -22,6 +22,7 @@ if [ "$*" = "strapi" ]; then
       --dbssl=$DATABASE_SSL \
       $EXTRA_ARGS
 
+    mv /usr/local/bin/server.js /srv/app/config/server.js
   elif [ ! -d "node_modules" ] || [ ! "$(ls -qAL node_modules 2>/dev/null)" ]; then
 
     if [ -f "yarn.lock" ]; then
@@ -45,6 +46,7 @@ if [ "$*" = "strapi" ]; then
   fi
 
   echo "Starting your app (with ${STRAPI_MODE:-develop})..."
+  npm run build
   exec strapi "${STRAPI_MODE:-develop}"
 
 else
